@@ -66,16 +66,14 @@ const ColorList = ({ colors, updateColors, setDirty }) => {
         console.log({res})
         // close editing form
         setAdding(false);
+        // reset color add form
+        setColorToAdd(initialColor);
         // update master list and propagage upwards
         setDirty(true);
-        // const newColors = colors.map(item => (item.id === res.data.id) ? res.data : item )
-        // updateColors(newColors)
       })
       .catch(err => {
         console.log({err})
       })
-
-
   }
 
 
