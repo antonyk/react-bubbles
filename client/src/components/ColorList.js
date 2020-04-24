@@ -59,6 +59,21 @@ const ColorList = ({ colors, updateColors, setDirty }) => {
 
   const saveNew = e => {
     e.preventDefault();
+    // Make a put request to save the new color
+    const token = JSON.parse(localStorage.getItem('token'));
+    axiosWithAuth(token).post(`/api/colors/`, colorToAdd)
+      .then(res => {
+        console.log({res})
+        // close editing form
+        setAdding(false);
+        // update master list and propagage upwards
+        setDirty(true);
+        // const newColors = colors.map(item => (item.id === res.data.id) ? res.data : item )
+        // updateColors(newColors)
+      })
+      .catch(err => {
+        console.log({err})
+      })
 
 
   }
