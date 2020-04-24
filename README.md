@@ -26,10 +26,22 @@ In this project you will create a login page and request a token from the server
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Explain what a token is used for.
-- [ ] What steps can you take in your web apps to keep your data secure?
-- [ ] Describe how web servers work.
-- [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+- [ Q ] Explain what a token is used for.
+
+  [ A ] A token can have many meanings, but in the context of authentication, it is a stand-in for a user's full credentials, that can be used to authenticate a user automatically by passing it through the header on each request to protected content.
+
+- [ Q ] What steps can you take in your web apps to keep your data secure?
+
+  [ A ] We can add an SSL certificate to our web server, allowing it to encrypt requests made to and from it. We can add user authentication to our website, restrict access to it only to the users which have account.
+
+- [ Q ] Describe how web servers work.
+
+  [ A ] Web server is the server-side software that responds to HTTP/HTTPS requests by listening for them on a specified port, using the TCP/IP protocol. As the server "listens" (meaning it waits), a client can make one of 7 different HTTP requests, which are used to inform the server what the request is about. For example, a GET request will request a certain server resource through the request's uri. The server will then respond to that request with a status and optionally will include a data packet with the response.
+
+- [ Q ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+  [ A ] CRUD, which stands for create, read, update and delete, can be mapped to the HTTP methods POST (create), GET (read), PUT (update), DELETE (delete).
+
 
 
 ## Project Set Up
